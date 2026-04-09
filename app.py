@@ -61,6 +61,24 @@ data = load_synthetic_data()
 st.title("SaaS Growth & Retention Analyzer")
 st.markdown("A data-driven deep dive into user onboarding behavior, A/B testing, and churn prediction.")
 
+# --- THE BUSINESS PROBLEM & CONTEXT ---
+st.markdown("### 🎯 The Business Problem")
+st.write("""
+Product teams often face three critical blind spots: **Activation Bottlenecks** (where do users drop off?), **Feature ROI** (does a new UI actually convert?), and **Churn Drivers** (what behaviors predict cancellation?). This dashboard answers these questions.
+""")
+
+with st.expander("📊 Read about the Data & Methodology"):
+    st.write("""
+    **The Data Context:**
+    To demonstrate these analytics without exposing proprietary company data, this project uses a Python script to generate a highly realistic, synthetic dataset of **10,000 SaaS users**. 
+    
+    **Data Dictionary:**
+    * `onboarding_step_reached`: Step 1 through 5 (representing the onboarding funnel).
+    * `test_group`: 'Control' vs 'Variant' (simulating an A/B test for a new UI).
+    * `feature_A_clicks` & `feature_B_clicks`: Simulated engagement metrics.
+    * `churned`: Boolean indicating if the user ultimately canceled their subscription.
+    """)
+
 # Top-level metrics
 col1, col2, col3 = st.columns(3)
 col1.metric("Total Users Evaluated", f"{len(data):,}")
