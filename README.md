@@ -8,6 +8,23 @@ The **SaaS Growth & Retention Analyzer** is a data-driven web application design
 
 This project simulates a real-world product analytics workflow for a software creation platform. It ingests user behavior data and applies exploratory data analysis (EDA), statistical hypothesis testing, and machine learning to turn raw data into **winning product bets**.
 
+## 🎯 The Business Problem
+Designed for a B2B SaaS platform that thrives on user retention and signup.
+1. **Activation Bottlenecks:** Where are users abandoning the onboarding process?
+2. **Feature ROI:** Does a newly designed UI actually improve conversion rates?
+3. **Churn Drivers:** What specific user behaviors signal that an account is about to cancel?
+
+This dashboard was built to answer these exact questions.
+
+## 📊 The Data Context
+To demonstrate these analytics without exposing proprietary company data, this project uses a custom Python script to generate a highly realistic, synthetic dataset of **10,000 SaaS users**. 
+
+**Key variables tracked in this dataset include:**
+* `onboarding_step_reached` (1 through 5, representing the funnel)
+* `test_group` (Control vs. Variant, for A/B testing a new UI)
+* `feature_A_clicks` & `feature_B_clicks` (Engagement metrics)
+* `churned` (Boolean, representing if the user canceled their subscription)
+  
 ## ✨ Key Features & Business Impact
 
 ### 1. Funnel Optimization (EDA)
